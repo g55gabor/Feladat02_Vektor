@@ -30,7 +30,7 @@ erre a tömbre fogunk cím szerint hivatkozni az eljárásokban.
 
 ### tömb feltöltése
 
-` 
+
         public static void sorozatGeneralas(ref bool[] tomb)
         {
             ErmeFeldobo ermeDobas = new ErmeFeldobo();
@@ -41,7 +41,7 @@ erre a tömbre fogunk cím szerint hivatkozni az eljárásokban.
                 tomb[i] = dobas;
             }            
         }
-`
+
 
 A sorozatGeneralas eljárás cím szerint (ref) hivatkozik a Main-ben generált tömbre.
 Létrehozunk egy ermeDobas objektumpéldányt felhasználva az ErmeFeldobo objektumot.
@@ -52,7 +52,6 @@ A for ciklus a paraméterben átadott tömb hosszának mebfelelő számban fut l
 
 a hamisakSzazaleka double típusú függvény az összegzés tételét felhasználva számolja az írás dobásának százalékát a dobási sorozatból.
 
-`
         public static double hamisakSzazaleka(ref bool[] tomb)
         {
             int szam = 0;
@@ -64,7 +63,6 @@ a hamisakSzazaleka double típusú függvény az összegzés tételét felhaszn�
             szazalek =(double)szam * 100 / tomb.Length;
             return szazalek;
         }
-`
 
 mivel a hamis események számát egész (int) szám formátumban tároltuk, ezért a százalék számításánál kénytelenek vagyunk castolni 
 double tipussá, ugyanis ha ezt nem tennénk, akkor a százalék értéke is egész lenne. - nem tudnánk 2 tizedes pontossággal megjeleníteni.
